@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in - School Drive</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:#f2f2f2;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .container{
+        background:white;
+        width:360px;
+        padding:40px;
+        border-radius:10px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.15);
+        text-align:center;
+    }
+
+    .logo{
+        font-size:28px;
+        font-weight:bold;
+        margin-bottom:10px;
+    }
+
+    .blue{ color:#4285F4; }
+    .red{ color:#EA4335; }
+    .yellow{ color:#FBBC05; }
+    .green{ color:#34A853; }
+
+    h2{
+        margin:10px 0;
+        font-weight:normal;
+    }
+
+    p{
+        color:#666;
+        font-size:14px;
+    }
+
+    input{
+        width:100%;
+        padding:14px;
+        margin-top:18px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:15px;
+        box-sizing:border-box;
+    }
+
+    button{
+        width:100%;
+        padding:13px;
+        margin-top:20px;
+        background:#1a73e8;
+        border:none;
+        color:white;
+        font-size:15px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#1665c1;
+    }
+
+    .warning{
+        color:#d93025;
+        font-size:18px;
+        font-weight:bold;
+    }
+
+    ul{
+        text-align:left;
+        margin-top:20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="box">
+
+    <div class="logo">
+        <span class="blue">G</span>
+        <span class="red">o</span>
+        <span class="yellow">o</span>
+        <span class="blue">g</span>
+        <span class="green">l</span>
+        <span class="red">e</span>
+    </div>
+
+    <h2>Sign in</h2>
+    <p>to continue to School Drive</p>
+
+    <input type="text" placeholder="Email or phone">
+
+    <input type="password" placeholder="Password">
+
+    <button onclick="showMessage()">Next</button>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("box").innerHTML = `
+
+<div class="warning">
+⚠️ You Got Phished
+</div>
+
+<p style="margin-top:20px;">
+This was a cyber security awareness simulation.
+</p>
+
+<p>
+Real phishing websites try to steal passwords using fake login pages and shared document links.
+</p>
+
+<ul>
+<li>Always check the URL carefully</li>
+<li>Do not trust random shared files</li>
+<li>Watch for fake login pages</li>
+<li>Never enter passwords after clicking unknown links</li>
+<li>Think before you click</li>
+</ul>
+
+<button onclick="location.reload()">
+Try Again
+</button>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
